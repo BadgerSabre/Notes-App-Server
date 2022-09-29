@@ -14,7 +14,7 @@ app.use(
 )
 
 // -- Routes -- //
-app.use('/notes', require('./routes/notes'))
+//app.use('/notes', require('./routes/notes'))
 
 // app.use(process.env.PORT)
 
