@@ -6,15 +6,15 @@ const cors = require('cors')
 
 const app = express();
 
-// -- Middleware -- //
+// Middleware
 app.use(
     bodyparser.json( { limit: "30mb", extended: true }),
     bodyparser.urlencoded( { limit: "30mb", extended: true }),
     cors()
 )
 
-// -- Routes -- //
-//app.use('/notes', require('./routes/notes'))
+// Routes
+app.use('/notes', require('./routes/notes'))
 
 // app.use(process.env.PORT)
 
