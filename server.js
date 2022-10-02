@@ -15,6 +15,7 @@ app.use(
 
 // Routes
 app.use('/notes', require('./routes/notes'))
+app.use('/auth', require('./routes/auth'))
 
 // app.use(process.env.PORT)
 

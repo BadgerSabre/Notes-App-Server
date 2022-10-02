@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 const Crypto = require('crypto')
-const User = require('../db/schemas/user')
+const User = require('../models/user')
 
 const registerUser = (req,res) => {
     const { email, name, password } = req.body;
