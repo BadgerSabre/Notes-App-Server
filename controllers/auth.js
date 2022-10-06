@@ -24,7 +24,6 @@ const login = async (req,res) => {
     let validPass = await bcrypt.compare(password, user.password)
     if (!validPass) return res.send('Invalid Email or Password.')
     let authToken = generateAuthToken()
-    console.log(authToken)
     User.findByIdAndUpdate(user._id, {authToken: authToken})
     res.send({name: user.name, uid: user._id, authToken: user.authToken})
 }

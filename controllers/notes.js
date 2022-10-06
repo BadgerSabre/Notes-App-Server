@@ -30,9 +30,9 @@ const deleteNote = (req,res) => {
     })
 }
 
-const updateNote = (req,res) => {
-    Note.findByIdAndUpdate({_id: nid}, (err,doc) => {
-
+const updateNote = async (req,res) => {
+    const editedUser = await Note.findByIdAndUpdate({_id: nid}, (err,doc) => {
+        res.json({ message: `User: ${editedUser.username} was edited successfully!` })
     })
 }
 
